@@ -1,5 +1,6 @@
 # documents-for-fun
 ## A3004NS
+相关文章：[TOTOLINK A3004NS 国行刷入 Breed 不死和 hiboy Padavan 固件](https://woodenrobot.me/2019/09/17/A3004NS/)
 包含 TOTOLINK A3004NS 路由器刷机相关文件
 
 ```
