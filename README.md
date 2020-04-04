@@ -13,14 +13,16 @@
 └── dd备份
 ```
 
-## 优酷路由宝 YK-L1c
-相关文章：[优酷土豆路由宝 YK-L1c 刷机过程](https://www.sqyai.com/post-562.html)
+## 优酷路由宝 YK-L1c 和 YK-L1
+相关文章：[优酷路由宝 YK-L1c 和 YK-L1 刷入 Breed 不死和 hiboy Padavan 固件](https://woodenrobot.me/2020/04/04/YK-L1c/)
 
-包含优酷路由宝 YK-L1c 刷入 Padavan 固件相关文件
+包含优酷路由宝 YK-L1c 和 YK-L1 刷入 Breed 及 Padavan 固件相关文件
 ```
 .
 ├── RT-N14U-GPIO-1-youku1-128M_3.4.3.9-099.trx
 ├── Youku-L1c-0818-root.bin
+├── breed 备份
+│   └── YK-L1
 └── breed-mt7620-youku-yk1.bin
 ```
 
