@@ -25,9 +25,12 @@
 ```
 
 ## 群晖 Synology DSM
-相关文章：[修复黑群晖 Moments 1.3.x 版本人物识别不能使用问题](https://woodenrobot.me/2019/09/26/fix-moments/)
+相关文章：
+- [修复黑群晖 Moments 1.3.x 版本人物识别不能使用问题](https://woodenrobot.me/2019/09/26/fix-moments/)
+- [群晖 Video Station 支持 DTS 和 eac3 解决方案](https://woodenrobot.me/2019/08/12/syn-vediostation/)
 
 ```
 .
 └── libsynophoto-plugin-detection.so
+└── ffmpeg_dts_eac3_patch.sh
 ```
