@@ -19,6 +19,8 @@ function install() {
 function uninstall() {
     #恢复之前备份的 /usr/syno/bin/synoups 文件
     mv -f /usr/syno/bin/synoups.orig /usr/syno/bin/synoups
+
+    echo 'UPS 断电真关机补丁卸载成功'
 }
 
 # SHELL 	******************************************************************
