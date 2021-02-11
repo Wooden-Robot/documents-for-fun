@@ -4,10 +4,14 @@ export PATH
 clear
 # VAR 	******************************************************************
 vAction=$1
+detection_from=$2
 
 function generate_moments_detection() {
-    wget -O - https://raw.githubusercontent.com/Wooden-Robot/documents-for-fun/master/Synology/libsynophoto-plugin-detection.so  >/var/packages/SynologyMoments/target/usr/lib/libsynophoto-plugin-detection.so
-
+    if [ "$detection_from" == 'gitee' ]; then
+        wget -O - https://gitee.com/woodenrobot/documents-for-fun/raw/master/Synology/libsynophoto-plugin-detection.so  >/var/packages/SynologyMoments/target/usr/lib/libsynophoto-plugin-detection.so
+    else
+        wget -O - https://raw.githubusercontent.com/Wooden-Robot/documents-for-fun/master/Synology/libsynophoto-plugin-detection.so  >/var/packages/SynologyMoments/target/usr/lib/libsynophoto-plugin-detection.so
+    fi
 }
 
 # Function List	*******************************************************************************
