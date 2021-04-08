@@ -23,6 +23,7 @@ function install() {
     if [ -f "/var/packages/CodecPack/target/bin/ffmpeg33" ]; then
         mv -n /var/packages/CodecPack/target/bin/ffmpeg33 /var/packages/CodecPack/target/bin/ffmpeg33.orig
         cp -n /var/packages/VideoStation/target/bin/ffmpeg /var/packages/CodecPack/target/bin/ffmpeg33
+    fi
     #设置脚本相应权限
     chown root:VideoStation /var/packages/VideoStation/target/bin/ffmpeg
     chmod 750 /var/packages/VideoStation/target/bin/ffmpeg
@@ -34,12 +35,14 @@ function install() {
     sed -i -e 's/eac3/3cae/' -e 's/dts/std/' -e 's/truehd/dheurt/' /var/packages/VideoStation/target/lib/libsynovte.so
     echo '请重新启动Video Station，并测试FFMPEG是否正常工作'
 }
+
 function uninstall() {
     #恢复之前备份的 VideoStation's ffmpeg, libsynovte.so文件
     mv -f /var/packages/VideoStation/target/bin/ffmpeg.orig /var/packages/VideoStation/target/bin/ffmpeg
     mv -f /var/packages/VideoStation/target/lib/libsynovte.so.orig /var/packages/VideoStation/target/lib/libsynovte.so
     if [ -f "/var/packages/CodecPack/target/bin/ffmpeg33.orig" ]; then
         mv -f /var/packages/CodecPack/target/bin/ffmpeg33.orig /var/packages/CodecPack/target/bin/ffmpeg33
+    fi
 }
 
 # SHELL 	******************************************************************
