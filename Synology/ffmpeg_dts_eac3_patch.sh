@@ -19,6 +19,10 @@ function install() {
     generate_ffmpeg_wrapper
     # #下载ffmpeg脚本
     # wget -O - https://gist.githubusercontent.com/Wooden-Robot/4c1791b50b3dbc28ed0aa3471322b49b/raw/d460355bdfe9a7a3099ee9886f9187e571bce307/ffmpeg-wrapper >/var/packages/VideoStation/target/bin/ffmpeg
+    #6.2.4系统补丁
+    if [ -f "/var/packages/CodecPack/target/bin/ffmpeg33" ]; then
+        mv -n /var/packages/CodecPack/target/bin/ffmpeg33 /var/packages/CodecPack/target/bin/ffmpeg33.orig
+        cp -n /var/packages/VideoStation/target/bin/ffmpeg /var/packages/CodecPack/target/bin/ffmpeg33
     #设置脚本相应权限
     chown root:VideoStation /var/packages/VideoStation/target/bin/ffmpeg
     chmod 750 /var/packages/VideoStation/target/bin/ffmpeg
@@ -34,6 +38,8 @@ function uninstall() {
     #恢复之前备份的 VideoStation's ffmpeg, libsynovte.so文件
     mv -f /var/packages/VideoStation/target/bin/ffmpeg.orig /var/packages/VideoStation/target/bin/ffmpeg
     mv -f /var/packages/VideoStation/target/lib/libsynovte.so.orig /var/packages/VideoStation/target/lib/libsynovte.so
+    if [ -f "/var/packages/CodecPack/target/bin/ffmpeg33.orig" ]; then
+        mv -f /var/packages/CodecPack/target/bin/ffmpeg33.orig /var/packages/CodecPack/target/bin/ffmpeg33
 }
 
 # SHELL 	******************************************************************
